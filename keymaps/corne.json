@@ -1,0 +1,11 @@
+{
+	"keyboard": "crkbd/rev1",
+	"keymap": "nesth",
+	"layout": "LAYOUT_crkbd_w",
+	"layers": [
+		[ "_BASE" ],
+		[ "_LOWER" ],
+		[ "_RAISE" ],
+		[ "_ADJUST" ]
+	]
+}
