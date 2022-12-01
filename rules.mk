@@ -1,5 +1,10 @@
 SRC += nesth.c 
 
+ifeq ($(strip $(MCU)), atmega32u4)
+	LTO_ENABLE = yes
+	BOOTLOADER = atmel-dfu
+endif
+
 ifeq ($(KEYBOARD), crkbd/rev1)
 	RGBLIGHT_ENABLE    = no
 	RGB_MATRIX_ENABLE  = yes
@@ -8,9 +13,9 @@ ifeq ($(KEYBOARD), crkbd/rev1)
 	NKRO_ENABLE        = no
 	OLED_ENABLE 	   = yes
 	OLED_DRIVER        = SSD1306
-	LTO                = yes
 	SLEEP_LED_ENABLE   = no
 endif
+
 
 # RP2040-specific options
 #PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
