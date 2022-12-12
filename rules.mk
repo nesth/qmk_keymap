@@ -1,4 +1,7 @@
-SRC += nesth.c 
+VPATH += $(USER_PATH)/features
+SRC += nesth.c  combos.c
+
+COMBO_ENABLE = yes
 
 ifeq ($(strip $(MCU)), atmega32u4)
 	LTO_ENABLE = yes
