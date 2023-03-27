@@ -4,9 +4,9 @@
 
 /* Select hand configuration */
 
-//#define MASTER_LEFT
+#define MASTER_LEFT
 // #define MASTER_RIGHT
-#define EE_HANDS
+//#define EE_HANDS
 
 // #define SSD1306OLED
 #undef USE_I2C
