@@ -1,0 +1,9 @@
+{
+    "keyboard": "ploopyco/trackball/rev1_005",
+    "keymap": "nesth",
+    "layout": "LAYOUT_trackball_c",
+    "layers": [
+        [ "_TRACK1" ],
+        [ "_TRACK2" ]
+    ]
+}
