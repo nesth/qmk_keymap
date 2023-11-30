@@ -34,4 +34,17 @@
     RGB_MOD,    RGB_HUD,RGB_SAD,RGB_VAD,RGB_SPD,KC_NO,      KC_SCRL,KC_VOLD,KC_NO,  KC_NO,  KC_NO,  RGB_RMOD, \
                                 KC_LGUI,LOWER,  KC_SPC,     KC_ENT, RAISE, KC_RALT
 
+#define _TRACK1 \
+    KC_BTN1, KC_BTN3, KC_BTN2, \
+        KC_BTN4, LT(1, KC_BTN5)
+
+#define _TRACK2 \
+    DRAG_SCROLL, KC_NO, KC_NO, \
+        KC_NO, KC_NO
+
+#define _TRACK3 \
+    KC_NO, KC_NO, KC_NO \
+        KC_NO, KC_NO
+
 #define LAYOUT_crkbd_w(...) LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_trackball_c(...) LAYOUT(__VA_ARGS__)

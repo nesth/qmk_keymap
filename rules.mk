@@ -1,7 +1,4 @@
-VPATH += $(USER_PATH)/features
-SRC += nesth.c  combos.c
 
-COMBO_ENABLE = yes
 
 ifeq ($(strip $(MCU)), atmega32u4)
 	LTO_ENABLE = yes
@@ -9,6 +6,10 @@ ifeq ($(strip $(MCU)), atmega32u4)
 endif
 
 ifeq ($(KEYBOARD), crkbd/rev1)
+	VPATH += $(USER_PATH)/features
+	SRC += nesth.c  combos.c
+
+	COMBO_ENABLE       = yes
 	RGBLIGHT_ENABLE    = no
 	RGB_MATRIX_ENABLE  = yes
 	RGB_MATRIX_DRIVER  = WS2812
@@ -23,3 +24,9 @@ endif
 # RP2040-specific options
 #PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
 #SERIAL_DRIVER = vendor
+
+ifeq ($(KEYBOARD), ploopyco/trackball/rev1_005)
+	SRC += trackball.c
+	TAP_DANCE_ENABLE = yes
+	MOUSEKEY_ENABLE  = yes
+endif

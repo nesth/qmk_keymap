@@ -64,4 +64,4 @@ jobs:
           *.uf2
 
   purge:
-    uses: filterpaper/scripts/.github/workflows/delete-completed.yml@main
+    uses: filterpaper/scripts/.github/workflows/purge-workflow.yml@main
